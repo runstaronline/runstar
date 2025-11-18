@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Runstar\\": "includes/"
+    }
+  },
+  "name": "runstar-pro/runstar-pro",
+  "description": "Runstar Pro Phase 1 plugin – developer mode",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later"
+}

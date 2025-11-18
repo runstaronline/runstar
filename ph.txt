@@ -1,0 +1,18 @@
+<?php
+
+class Runstar_Autoloader {
+
+    public static function register() {
+        spl_autoload_register([__CLASS__, 'autoload']);
+    }
+
+    public static function autoload($class) {
+        if (0 !== strpos($class, 'Runstar_')) {
+            return;
+        }
+        $file = plugin_dir_path(__DIR__) . 'includes/' . str_replace('_', '-', strtolower($class)) . '.php';
+        if (file_exists($file)) {
+            require $file;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<?php
+
+class Runstar_Loader {
+
+    public static function init() {
+        add_action('admin_menu', [__CLASS__, 'add_admin_menu']);
+    }
+
+    public static function add_admin_menu() {
+        add_menu_page(
+            'Runstar Pro',
+            'Runstar Pro',
+            'manage_options',
+            'runstar-pro',
+            [__CLASS__, 'admin_page'],
+            'dashicons-admin-generic'
+        );
+    }
+
+    public static function admin_page() {
+        ?>
+        <div class="wrap">
+            <h1>Runstar Pro</h1>
+            <p>Phase 1: Developer Mode Plugin Installed.</p>
+        </div>
+        <?php
+    }
+}

@@ -1,0 +1,18 @@
+<?php
+/**
+ * Plugin Name: Runstar Pro
+ * Description: AI eCommerce builder (Phase 1) — developer mode.
+ * Version: 1.0.0
+ * Author: Munashe Chiroodza
+ */
+
+if (! defined('ABSPATH')) {
+    exit;
+}
+
+// Autoload classes
+require_once plugin_dir_path(__FILE__) . 'includes/class-runstar-autoloader.php';
+Runstar_Autoloader::register();
+
+// Initialize loader
+Runstar_Loader::init();
